@@ -1,21 +1,52 @@
-# OCTUPUS
-An admin system on roblox.  
+Adonis is a server moderation, management and an administration system created for use on the Roblox platform.
 
-What's forking?
+Uploaded to GitHub for collaboration and issue tracking.
 
-Forking is a git clone operation executed on a server copy of a projects repo. ... You create a new feature branch in your local repo. Work is done to complete the new feature and git commit is executed to save the changes. You then push the new feature branch to your remote forked repo.
+NOTE: Adonis is constantly changing. Whether it be new features, improvements, or the removal or modification of existing features when necessary. If a plugin you've been using suddenly stops working, something it relied on was likely changed. Adonis is updated whenever new changes are made, as opposed to other softwares that have "stable" and "nightly" branches/releases, Adonis' model on ROBLOX will always be the most up to date version, so if you have important plugins that are essential to the operation of your game, I advise that you either fork Adonis or use the version that can be found in the releases on this GitHub. You will have to manually update to get future changes. 
 
-Remember!
+By default, the releases on this GitHub have DebugMode enabled, meaning the MainModule will be loaded from the parent folder of the Loader model. To disable it and instead retreive updates from the currently uploaded MainModule, open Adonis_Loader > Loader > Loader.lua and change DebugMode = true to DebugMode = false in the "data" table.
 
-You should (github) fork when:
+Quick Start: https://youtu.be/XnhWcfoAJ_o
 
-You intend on submitting pull requests back upstream.
-The maintainer doesn't like your new feature set, so you decide to add them anyway, and maintain the fork in parallel, routinely merging in changes from upstream as an alternative to the main branch. (Note that you may be required to change the name due to trademark restrictions. I'm not real clear on this.)
-You should create a new project when:
 
-When a project is abandoned.
-You want to use the project as a starting point for some other project with a completely different goal.
-When your version of the project will not be regularly merging in changes from the original, upstream, branch.
-But that's honestly just my opinion on the matter.
+## How to load a custom version:
 
-The other important thing to note here is that both of these are technically "forking" the project. One just remains closer to the original project and utilizes the GitHub feature of the same name.
+When DebugMode is enabled, the loader will try to load the MainModule from the same parent as the Adonis_Loader model instead of requiring the model by ID. This is how I test changes to Adonis before each update, hence why it's called "Debug Mode."
+
+If you want to maintain your own version of the MainModule you need to either enable DebugMode in the loader script and have the MainModule in the same directory as the "Adonis_Loader" model (NOT in the model, just the same PARENT as the model) or you need to upload the MainModule to Roblox and change the ModuleId in the Loader script to your own module's asset ID.
+
+You can download "snapshot" versions of Adonis from this repo's releases page. These models consist of a folder containing the MainModule and Loader at the time the release was made. DebugMode is set to true in the Loader, so it will (by default) load the included MainModule.
+
+If you find any bugs or come up with useful changes feel free to submit an issue or pull request. Doing so will help make Adonis better for everyone :)!
+However, please do not submit issues caused by changes you made to your personal version of the code. If you are trying to change Adonis' code, you do so at your own risk and anything you break as a result will be on you to debug. 
+
+Feel free to seek guidance in the development channel on our Discord.
+
+## Building from source:
+
+This project uses Rojo.
+
+Follow the installation steps outlined here: https://rojo.space/docs/installation/.
+
+If you need to get help with Rojo, why not head on here: https://rojo.space/docs/help/
+
+Once installed, download/clone this repository, enter the repo's directory, and run "rojo build -o Adonis.rbxmx" to build a model file or "rojo build -o Adonis.rbxlx" to build a place file (Note: In the place file, you can find the model in ServerScriptService > Adonis_Rojo)
+ 
+## Adonis Loader:
+
+https://www.roblox.com/library/2373505175/Adonis-Loader-BETA
+
+
+## Adonis MainModule:
+
+https://www.roblox.com/library/2373501710/Adonis-MainModule
+
+
+## Documentation:
+
+https://github.com/Sceleratis/Adonis/wiki
+
+
+## Our Discord:
+
+https://discord.gg/rdkgGc4
